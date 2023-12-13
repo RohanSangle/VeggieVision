@@ -1,5 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import LoginScreen from './app/screen/LoginScreen';
 
 
 export default function App() {
@@ -7,9 +8,7 @@ export default function App() {
     <>
 
       <View style={styles.container}>
-        <Text>Welcome to VeggieVision!</Text>
-        <Text>What do you want to cook this time?</Text>
-        <StatusBar style="auto" />
+        <LoginScreen/>
       </View>
     </>
   );
@@ -18,7 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#DDB6C4',
     alignItems: 'center',
     justifyContent: 'center',
   },
