@@ -4,6 +4,7 @@ import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
 import HomeScreen from './app/screen/HomeScreen';
 import * as SecureStore from "expo-secure-store";
+import TabNavigation from './app/Navigations/TabNavigation';
 
 const tokenCache = {
   getToken(key) {
@@ -52,7 +53,10 @@ export default function App() {
       <View style={styles.container}>
         <SafeAreaView style={styles.container}>
           <SignedIn>
-            <HomeScreen/>
+            <NavigationContainer>
+              <TabNavigation/>
+            </NavigationContainer>
+            
             <SignOut/>
           </SignedIn>
 
