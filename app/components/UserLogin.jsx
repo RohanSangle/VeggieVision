@@ -9,10 +9,21 @@ const UserLogin = () => {
             <Text>Sign up with</Text>
         </View>
 
-        <TouchableOpacity style={styles.loginbox}>
-            <Image source={google} style={{width:40,height:40}}/>
-            <Text>Sign up with Google</Text>
-        </TouchableOpacity>
+        <View style={styles.loginbox}>
+
+            <TouchableOpacity style={styles.loginbutton}>
+                <Image source={google} style={{width:40,height:40}}/>
+                <Text>Sign up with Google</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.loginbutton}>
+                <Image source={google} style={{width:40,height:40}}/>
+                <Text>Sign up with Facebook</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.loginbutton}>
+                <Image source={google} style={{width:40,height:40}}/>
+                <Text>Sign up as Guest</Text>
+            </TouchableOpacity>
+        </View>
     </>
 
   )
@@ -33,21 +44,41 @@ const styles = StyleSheet.create({
         height:'50%',
         width:'90%',
         borderRadius:20,
+        left:'5%',
+        //paddingLeft:'10%',
     },
-    loginbox:{
+    loginbutton:{
         alignItems:'center',
         justifyContent:'center',
         fontSize:20,
         fontWeight:'bold',
-        position: 'absolute',
+        position: 'relative',
         display:'flex',
         flexDirection:'row',
-        backgroundColor:'#FDFDFC',
-        //color:'#FDFDFC',
-        bottom: screenHeight * 0.4,
-        height:'10%',
-        width:'50%',
-        borderRadius:20,
+        backgroundColor:'#106274',
+        //bottom: screenHeight * 0.1,
+        height:'28%',
+        width:'70%',
+        borderRadius:30,
+        gap:15,
+        //left:'8%',
+        top:'10%',
     },
+    loginbox:{
+        flex:1,
+        backgroundColor:'#fff',
+        alignItems:'center',
+        //justifyContent:'center',
+        display:'flex',
+        flexDirection:'column',
+        position: 'absolute',
+        bottom: screenHeight * 0.3,
+        height:'20%',
+        width:'90%',
+        borderRadius:20,
+        gap:50,
+        left:'5%',
+        //paddingLeft:'10%',
+    }
 
 });
