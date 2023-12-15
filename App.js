@@ -57,7 +57,7 @@ export default function App() {
               <TabNavigation/>
             </NavigationContainer>
             
-            <SignOut/>
+            <SignOut/>                       //need to pass this inside profile section
           </SignedIn>
 
           <SignedOut>

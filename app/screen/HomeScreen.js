@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native'
 import React from 'react'
 //import { useAuth } from "@clerk/clerk-expo";
+import '../components/Header'
 
 const HomeScreen = () => {
 
     return (
         <View style={styles.homescreen}>
-            <Text>HomeScreen</Text>
-            <TouchableOpacity>
-                <Text>Sign out</Text>
-            </TouchableOpacity>
+            <Header/>
         </View>
     )
 }
