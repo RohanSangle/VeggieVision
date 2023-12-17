@@ -1,10 +1,11 @@
 //import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView,Button } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView,Button} from 'react-native';
 import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
 import HomeScreen from './app/screen/HomeScreen';
 import * as SecureStore from "expo-secure-store";
 import TabNavigation from './app/Navigations/TabNavigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 const tokenCache = {
   getToken(key) {
@@ -51,13 +52,13 @@ export default function App() {
         publishableKey={"pk_test_d2VhbHRoeS1sYW1iLTQ1LmNsZXJrLmFjY291bnRzLmRldiQ"}
       >
       <View style={styles.container}>
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView >
           <SignedIn>
             <NavigationContainer>
-              <TabNavigation/>
+              <TabNavigation signoutcomponent={<SignOut/>}/>
             </NavigationContainer>
             
-            <SignOut/>                       //need to pass this inside profile section
+            {/* <SignOut/>                       //need to pass this inside profile section */}
           </SignedIn>
 
           <SignedOut>

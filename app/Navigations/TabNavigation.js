@@ -10,32 +10,41 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
-export default function TabNavigation() {
+const TabNavigation=({signoutcomponent})=> {
   return (
     <Tab.Navigator screenOptions={{
-      headerShown:false
+      headerShown:false,
+      tabBarStyle: {
+        // position: 'absolute',
+        display:'flex',
+        flexDirection: 'row',
+        // alignItems: 'center',
+        justifyContent: 'space-between', 
+      },
     }}>
       <Tab.Screen name="Home" component={HomeScreen} 
         options={{
             tabBarIcon:({color,size})=>(
-                <MaterialCommunityIcons name="home-outline" size={24} color="yellow" />
+                <MaterialCommunityIcons name="home-outline" size={size} color={color} />
             )
         }}
       />
       <Tab.Screen name="collection" component={Collection}
         options={{
             tabBarIcon:({color,size})=>(
-                <Feather name="bookmark" size={24} color="yellow" />
+                <Feather name="bookmark" size={size} color={color} />
             )
         }}
       />
-      <Tab.Screen name="profile" component={Profile} 
+      <Tab.Screen name="profile" component={Profile}
         options={{
             tabBarIcon:({color,size})=>(
-                <FontAwesome5 name="user" size={24} color="yellow" />
+                <FontAwesome5 name="user" size={size} color={color} />
             )
         }}
       />
     </Tab.Navigator>
   )
-}
+};
+
+export default TabNavigation;

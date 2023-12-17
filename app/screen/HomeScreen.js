@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native'
 import React from 'react'
 //import { useAuth } from "@clerk/clerk-expo";
-import '../components/Header'
+import Header from '../components/Header'
 
 const HomeScreen = () => {
 

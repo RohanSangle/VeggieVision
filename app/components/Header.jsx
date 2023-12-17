@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View, TextInput } from 'react-native'
+import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 
