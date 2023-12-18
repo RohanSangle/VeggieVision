@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const Header = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>What food</Text>
       <Text>are we cooking today ?</Text>
 
@@ -19,6 +19,11 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-
+  container:{
+    flex:1,
+    backgroundColor:'red',
+    justifyContent:'center',
+    alignItems:'center'
+  },
 
 });

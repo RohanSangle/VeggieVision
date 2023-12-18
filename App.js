@@ -2,7 +2,7 @@
 import { StyleSheet, Text, View, SafeAreaView,Button} from 'react-native';
 import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
-import HomeScreen from './app/screen/HomeScreen';
+//import HomeScreen from './app/screen/HomeScreen';
 import * as SecureStore from "expo-secure-store";
 import TabNavigation from './app/Navigations/TabNavigation';
 import { NavigationContainer } from '@react-navigation/native';
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#DDB6C4',
-    alignItems: 'center',
-    justifyContent: 'center',
+    //alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 });
