@@ -3,7 +3,7 @@ import React from 'react'
 
 const Profile = ({signoutcomponent}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Profile</Text>
       {signoutcomponent}
     </View>
@@ -12,4 +12,11 @@ const Profile = ({signoutcomponent}) => {
 
 export default Profile
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    //backgroundColor: '#DDB6C4',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})

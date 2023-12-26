@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'absolute',
         bottom: screenHeight * 0.35,
+        left:'18%',
         //justifyContent: 'center',
     },
     startcooking:{
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
         height:50,
         width:250,
         borderRadius:20,
+        left:'15%',
 
     },
     userLoginContainer: {

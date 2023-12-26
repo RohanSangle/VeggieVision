@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 const TabNavigation=({signoutcomponent})=> {
   return (
     <Tab.Navigator screenOptions={{
-      headerShown:false,
+      //headerShown:false,
       tabBarShowLabel:false,
       tabBarStyle: {
         position: 'absolute',
@@ -75,7 +75,7 @@ const TabNavigation=({signoutcomponent})=> {
             )
         }}
       />
-      <Tab.Screen name="profile" component={Profile}
+      <Tab.Screen signoutcomponent={signoutcomponent} name="profile" component={Profile}
         options={{
             tabBarIcon:({size,focused})=>(
                 <FontAwesome5 name="user" size={size} color={focused ? "yellow" : "#106274"} />
