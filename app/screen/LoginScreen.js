@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Dimensions, TouchableOpacity, Animated } from 'react-native'
+import { StyleSheet, Text, View,Dimensions, TouchableOpacity, Animated,ImageBackground } from 'react-native'
 import React,{ useState, useRef } from 'react'
 //import UserLogin from '../components/UserLogin';
 import * as WebBrowser from "expo-web-browser";
@@ -39,7 +39,11 @@ const LoginScreen=()=> {
     }, []);
 
   return (
-    <>
+    <ImageBackground
+        source={require('../../assets/images/VeggieVision_loginscreen.png')}
+        style={styles.backgroundImage}
+    >
+
         <View style={styles.loginscreen}>
             <Text>VegLife</Text>
             <Text>Your favourite source for best recipies</Text>
@@ -49,11 +53,11 @@ const LoginScreen=()=> {
             <Text>Start Cooking</Text>
         </TouchableOpacity>
 
-        <Animated.View style={[styles.userLoginContainer, { transform: [{ translateY }] }]}
+        {/* <Animated.View style={[styles.userLoginContainer, { transform: [{ translateY }] }]}
         pointerEvents={showComponent ? 'auto' : 'none'}>
             {showComponent && <UserLogin />}
-        </Animated.View>
-    </>
+        </Animated.View> */}
+    </ImageBackground>
   )
 }
 
@@ -62,12 +66,18 @@ export default LoginScreen
 const screenHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        position:'relative',
+        resizeMode: 'cover', // or 'contain' depending on your preference
+        justifyContent: 'center', // Optional: Align content vertically
+      },
     loginscreen: {
         flex: 1,
         // backgroundColor: '#F7E8D3',
         alignItems: 'center',
         position: 'absolute',
-        bottom: screenHeight * 0.35,
+        bottom: screenHeight * 0.30,
         left:'18%',
         //justifyContent: 'center',
     },
@@ -76,7 +86,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#106274',
         alignItems: 'center',
         position: 'absolute',
-        bottom: screenHeight * 0.1,
+        bottom: screenHeight * 0.05,
         justifyContent: 'center',
         height:50,
         width:250,
@@ -84,8 +94,8 @@ const styles = StyleSheet.create({
         left:'15%',
 
     },
-    userLoginContainer: {
-        ...StyleSheet.absoluteFillObject,
-        justifyContent: 'flex-end',
-      },
+    // userLoginContainer: {
+    //     ...StyleSheet.absoluteFillObject,
+    //     justifyContent: 'flex-end',
+    // },
 });

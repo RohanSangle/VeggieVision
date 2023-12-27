@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Button } from 'react-native'
+import { StyleSheet, Text, View,Button,ImageBackground } from 'react-native'
 import React from 'react'
 import { useAuth } from '@clerk/clerk-expo';
 import Colors_pallete from '../constants/Colors_pallete'
@@ -22,20 +22,32 @@ const SignOut = () => {
 
 const Profile = () => {
   return (
-    <View style={styles.container}>
-      <Text>Profile</Text>
-      <SignOut/>
-    </View>
+    <ImageBackground
+      source={require('../../assets/images/VeggieVission_standard.png')}
+      style={styles.backgroundImage}
+    >
+      
+      <View style={styles.container}>
+        <Text>Profile</Text>
+        <SignOut/>
+      </View>
+    </ImageBackground>
   )
 }
 
 export default Profile
 
 const styles = StyleSheet.create({
-  container: {
+  backgroundImage: {
     flex: 1,
     position:'relative',
-    backgroundColor: Colors_pallete.PRIMARY,
+    resizeMode: 'cover', // or 'contain' depending on your preference
+    justifyContent: 'center', // Optional: Align content vertically
+  },
+  container: {
+    flex: 1,
+    //position:'relative',
+    //backgroundColor: Colors_pallete.PRIMARY,
     alignItems: 'center',
     justifyContent: 'center',
   },
