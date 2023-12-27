@@ -46,13 +46,13 @@ const SignOut = () => {
 
 export default function App() {
   return (
-    <>
+    // <>
       <ClerkProvider
         tokenCache={tokenCache} 
         publishableKey={"pk_test_d2VhbHRoeS1sYW1iLTQ1LmNsZXJrLmFjY291bnRzLmRldiQ"}
       >
-      <View style={styles.container}>
-        <SafeAreaView >
+      {/* <View style={styles.container}> */}
+        <SafeAreaView style={styles.container} >
           <SignedIn>
             <NavigationContainer>
               <TabNavigation signoutcomponent={<SignOut/>}/>
@@ -65,9 +65,9 @@ export default function App() {
             <LoginScreen/>
           </SignedOut>
         </SafeAreaView>
-      </View>
+      {/* </View> */}
       </ClerkProvider>
-    </>
+    // </>
   );
 }
 
@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
     flex: 1,
     //position:'relative',
     backgroundColor: '#DDB6C4',
+    // top:'20%',
+    // left:'20%',
     // alignItems: 'center',
     justifyContent: 'flex-end',
   },

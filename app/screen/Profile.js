@@ -15,7 +15,8 @@ export default Profile
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //backgroundColor: '#DDB6C4',
+    position:'relative',
+    backgroundColor: '#DDB6C4',
     alignItems: 'center',
     justifyContent: 'center',
   },

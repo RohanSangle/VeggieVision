@@ -4,23 +4,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Collection from '../screen/Collection';
 import Profile from '../screen/Profile';
 import HomeScreen from '../screen/HomeScreen';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons,Feather,FontAwesome5,Ionicons,AntDesign  } from '@expo/vector-icons';
 import Search from '../screen/Search';
 import Scan from '../screen/Scan';
-import { AntDesign } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigation=({signoutcomponent})=> {
   return (
     <Tab.Navigator screenOptions={{
-      //headerShown:false,
+      headerShown:false,
       tabBarShowLabel:false,
       tabBarStyle: {
-        position: 'absolute',
+        // position: 'absolute',
         bottom:0,
         right:0, 
         left:0, 

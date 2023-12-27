@@ -25,10 +25,12 @@ export default HomeScreen
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        //position:'absolute',
-        //backgroundColor:'#DDB6C4',
+        position:'relative',
+        backgroundColor:'#DDB6C4',
+        //top:'20%',
+        // zIndex:10,
         color:'blue',
-        //alignItems:'center',
+        alignItems:'center',
         justifyContent:'center',
         
     },
