@@ -3,9 +3,11 @@ import React from 'react'
 //import { useAuth } from "@clerk/clerk-expo";
 import Header from '../components/Header'
 import { Ionicons } from '@expo/vector-icons';
+//import { Colors } from 'react-native/Libraries/NewAppScreen';
+import colors from '../constants/Colors_pallete.js';
+
 
 const HomeScreen = () => {
-
     return (
         <View style={styles.container}>
             {/* <Header/> */}
@@ -26,10 +28,7 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         position:'relative',
-        backgroundColor:'#DDB6C4',
-        //top:'20%',
-        // zIndex:10,
-        color:'blue',
+        backgroundColor:colors.PRIMARY,
         alignItems:'center',
         justifyContent:'center',
         

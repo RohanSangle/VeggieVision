@@ -1,11 +1,11 @@
 //import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView,Button} from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView,Button, TouchableOpacity} from 'react-native';
 import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
-//import HomeScreen from './app/screen/HomeScreen';
 import * as SecureStore from "expo-secure-store";
 import TabNavigation from './app/Navigations/TabNavigation';
 import { NavigationContainer } from '@react-navigation/native';
+import Colors_pallete from './app/constants/Colors_pallete';
 
 const tokenCache = {
   getToken(key) {
@@ -24,61 +24,52 @@ const tokenCache = {
   },
 };
 
-const SignOut = () => {
-  const { isLoaded,signOut } = useAuth();
-  if (!isLoaded) {
-    return null;
-  }
-  return (
-    <View>
-      <Button
-        title="Sign Out"
-        onPress={() => {
-          signOut();
-        }}
-      />
-    </View>
-  );
-};
+// const SignOut = () => {
+//   const { isLoaded,signOut } = useAuth();
+//   if (!isLoaded) {
+//     return null;
+//   }
+//   return (
+//     <View>
+//       <Button
+//         title="Sign Out"
+//         onPress={() => {
+//           signOut();
+//         }}
+//       />
+//     </View>
+//   );
+// };
       
-
-
-
 export default function App() {
   return (
-    // <>
-      <ClerkProvider
-        tokenCache={tokenCache} 
-        publishableKey={"pk_test_d2VhbHRoeS1sYW1iLTQ1LmNsZXJrLmFjY291bnRzLmRldiQ"}
-      >
-      {/* <View style={styles.container}> */}
-        <SafeAreaView style={styles.container} >
-          <SignedIn>
-            <NavigationContainer>
-              <TabNavigation signoutcomponent={<SignOut/>}/>
-            </NavigationContainer>
-            
-            {/* <SignOut/>                       //need to pass this inside profile section */}
-          </SignedIn>
+    
+    <ClerkProvider
+      tokenCache={tokenCache} 
+      publishableKey={"pk_test_d2VhbHRoeS1sYW1iLTQ1LmNsZXJrLmFjY291bnRzLmRldiQ"}
+    >
+    
+      <SafeAreaView style={styles.container} >
+        <SignedIn>
+          <NavigationContainer>
+            <TabNavigation/>
+          </NavigationContainer>
+        </SignedIn>
 
-          <SignedOut>
-            <LoginScreen/>
-          </SignedOut>
-        </SafeAreaView>
-      {/* </View> */}
-      </ClerkProvider>
-    // </>
+        <SignedOut>
+          <LoginScreen/>
+        </SignedOut>
+      </SafeAreaView>
+    
+    </ClerkProvider>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //position:'relative',
-    backgroundColor: '#DDB6C4',
-    // top:'20%',
-    // left:'20%',
-    // alignItems: 'center',
+    backgroundColor: Colors_pallete.PRIMARY,
     justifyContent: 'flex-end',
   },
 });

@@ -7,10 +7,11 @@ import HomeScreen from '../screen/HomeScreen';
 import { MaterialCommunityIcons,Feather,FontAwesome5,Ionicons,AntDesign  } from '@expo/vector-icons';
 import Search from '../screen/Search';
 import Scan from '../screen/Scan';
+import colors from '../constants/Colors_pallete';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigation=({signoutcomponent})=> {
+const TabNavigation=()=> {
   return (
     <Tab.Navigator screenOptions={{
       headerShown:false,
@@ -22,7 +23,7 @@ const TabNavigation=({signoutcomponent})=> {
         left:0, 
         elevation:0,
         height:60,
-        backgroundColor:'#DDB6C4', 
+        backgroundColor:colors.PRIMARY, 
       },
     }}>
       <Tab.Screen name="Home" component={HomeScreen} 
@@ -71,7 +72,7 @@ const TabNavigation=({signoutcomponent})=> {
             )
         }}
       />
-      <Tab.Screen signoutcomponent={signoutcomponent} name="profile" component={Profile}
+      <Tab.Screen name="profile" component={Profile}
         options={{
             tabBarIcon:({size,focused})=>(
                 <FontAwesome5 name="user" size={size} color={focused ? "yellow" : "#106274"} />
