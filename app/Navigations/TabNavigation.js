@@ -52,7 +52,7 @@ const TabNavigation=()=> {
               <View style={{
                 alignItems:'center',
                 justifyContent:'center',
-                backgroundColor:'aqua',
+                backgroundColor:'yellow',
                 width: 70,
                 height: 70,
                 top:-20,

@@ -4,8 +4,9 @@ import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
 import * as SecureStore from "expo-secure-store";
 import TabNavigation from './app/Navigations/TabNavigation';
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import Colors_pallete from './app/constants/Colors_pallete';
+import { dark } from '@clerk/themes';
 
 const tokenCache = {
   getToken(key) {
@@ -47,6 +48,9 @@ export default function App() {
     <ClerkProvider
       tokenCache={tokenCache} 
       publishableKey={"pk_test_d2VhbHRoeS1sYW1iLTQ1LmNsZXJrLmFjY291bnRzLmRldiQ"}
+      appearance={{
+        baseTheme: dark
+      }}
     >
     
       <SafeAreaView style={styles.container} >
@@ -69,7 +73,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors_pallete.PRIMARY,
+    //backgroundColor: Colors_pallete.PRIMARY,
     justifyContent: 'flex-end',
   },
 });
