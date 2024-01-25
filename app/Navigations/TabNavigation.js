@@ -23,7 +23,7 @@ const TabNavigation=()=> {
         left:0, 
         elevation:0,
         height:60,
-        backgroundColor:colors.PRIMARY, 
+        backgroundColor:'pink', 
       },
     }}>
       <Tab.Screen name="Home" component={HomeScreen} 

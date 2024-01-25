@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
   },
   heading:{
     fontSize:25,
-    color:'brown',
+    color:'black',
     position:'relative',
     top:screenHeight*0.05,
 
   },
   profilepic:{
-    backgroundColor:'black',
+    backgroundColor:'white',
     height:100,
     width:100,
     borderRadius:99,
@@ -82,14 +82,14 @@ const styles = StyleSheet.create({
   },
   username:{
     fontSize:25,
-    color:'brown',
+    color:'black',
     position:'relative',
     top:screenHeight*0.16,
     
   },
   position:{
     fontSize:15,
-    color:'brown',
+    color:'black',
     position:'relative',
     top:screenHeight*0.16,
     

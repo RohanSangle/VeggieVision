@@ -1,4 +1,4 @@
-//import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView,Button, TouchableOpacity} from 'react-native';
 import LoginScreen from './app/screen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut, useAuth } from '@clerk/clerk-expo';
